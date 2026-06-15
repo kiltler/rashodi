@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Восходящие столбцы — холодная серебристо-мятная палитра -->
+    <path
+        android:fillColor="#6FB1C9"
+        android:pathData="M37,62 h11 a2,2 0 0 1 2,2 v14 a2,2 0 0 1 -2,2 h-11 a2,2 0 0 1 -2,-2 v-14 a2,2 0 0 1 2,-2 z" />
+    <path
+        android:fillColor="#8FB4DE"
+        android:pathData="M52,50 h11 a2,2 0 0 1 2,2 v26 a2,2 0 0 1 -2,2 h-11 a2,2 0 0 1 -2,-2 v-26 a2,2 0 0 1 2,-2 z" />
+    <path
+        android:fillColor="#5BC8B0"
+        android:pathData="M67,38 h11 a2,2 0 0 1 2,2 v38 a2,2 0 0 1 -2,2 h-11 a2,2 0 0 1 -2,-2 v-38 a2,2 0 0 1 2,-2 z" />
+    <!-- Линия тренда -->
+    <path
+        android:strokeColor="#E7EAF0"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M34,52 L48,46 L63,40 L78,28" />
+    <path
+        android:fillColor="#E7EAF0"
+        android:pathData="M78,28 m-4,0 a4,4 0 1 0 8,0 a4,4 0 1 0 -8,0" />
+</vector>

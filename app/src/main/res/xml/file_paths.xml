@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Папка для временных файлов экспорта, отдаваемых через «Поделиться». -->
+    <cache-path name="exports" path="exports/" />
+    <files-path name="exports_files" path="exports/" />
+</paths>
