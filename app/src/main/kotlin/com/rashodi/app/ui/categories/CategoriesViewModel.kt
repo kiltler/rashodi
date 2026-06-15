@@ -12,11 +12,18 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
+/** Палитра цветов для категорий и фондов (холодные тона). */
+val CategoryPalette: List<Int> = listOf(
+    0xFF8FB4DE.toInt(), 0xFF5BC8B0.toInt(), 0xFF9C8FD9.toInt(), 0xFF6FB1C9.toInt(),
+    0xFFB0BAC9.toInt(), 0xFFD98FB0.toInt(), 0xFF7FC8E0.toInt(), 0xFFE0707E.toInt(),
+    0xFFB07FD9.toInt(), 0xFF5BC8C8.toInt(), 0xFF8FA0B0.toInt(), 0xFF6F8FC9.toInt(),
+)
+
 data class CategoryDraft(
     val id: Long = 0,
     val name: String = "",
     val type: String = TYPE_EXPENSE,
-    val colorArgb: Int = PALETTE.first(),
+    val colorArgb: Int = CategoryPalette.first(),
     val discretionary: Boolean = false,
     val subcategories: List<String> = emptyList(),
     val newSub: String = "",
@@ -87,11 +94,7 @@ class CategoriesViewModel(private val repo: FinanceRepository) : ViewModel() {
     }
 
     companion object {
-        val PALETTE = listOf(
-            0xFF8FB4DE.toInt(), 0xFF5BC8B0.toInt(), 0xFF9C8FD9.toInt(), 0xFF6FB1C9.toInt(),
-            0xFFB0BAC9.toInt(), 0xFFD98FB0.toInt(), 0xFF7FC8E0.toInt(), 0xFFE0707E.toInt(),
-            0xFFB07FD9.toInt(), 0xFF5BC8C8.toInt(), 0xFF8FA0B0.toInt(), 0xFF6F8FC9.toInt(),
-        )
+        val PALETTE = CategoryPalette
 
         fun expenseOf(list: List<CategoryEntity>) = list.filter { it.type == TYPE_EXPENSE }
         fun incomeOf(list: List<CategoryEntity>) = list.filter { it.type == TYPE_INCOME }
